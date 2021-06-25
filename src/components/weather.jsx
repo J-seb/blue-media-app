@@ -39,7 +39,12 @@ const Weather = ({ onGetLocation }) => {
   };
 
   if (Object.keys(weather).length === 0) {
-    return <div>No Forecast yet</div>;
+    return (
+      <div>
+        Forecast is not ready yet. Please activate your browser geolocation and
+        refresh your page.
+      </div>
+    );
   }
   return (
     <div className="container-widget grid grid-2-rows">
@@ -63,7 +68,7 @@ const Weather = ({ onGetLocation }) => {
       <p className="weather-description">{`${weather.city} 
         presents actual temperature of ${weather.temp}°C and humidity of 
         ${weather.humidity}%HR. Temperature feelslike ${weather.feels_like}°C.
-        Today, we will have a max temperature of ${weather.temp_max} and minimum of ${weather.temp_min}.`}</p>
+        Today, we will have a max temperature of ${weather.temp_max}°C and minimum of ${weather.temp_min}°C.`}</p>
     </div>
   );
 };

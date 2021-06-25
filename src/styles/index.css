@@ -236,6 +236,11 @@ footer p {
 }
 
 /* NavBar */
+
+.form-group {
+  margin: 0;
+}
+
 .nav-container {
   margin: 0;
   border-bottom: 1px solid var(--primary-color);
@@ -419,6 +424,7 @@ footer p {
 
 .post-profile-content {
   margin-bottom: 1rem;
+  overflow-wrap: anywhere;
 }
 
 .btn-new-post {
