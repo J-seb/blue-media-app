@@ -504,8 +504,10 @@ footer p {
   margin-top: 20px;
 }
 
-.weather.location {
+.weather-location {
   text-align: right;
+  margin-left: auto;
+  margin-right: 0;
 }
 
 .map-container {

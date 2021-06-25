@@ -77,16 +77,19 @@ const Profile = (props) => {
 
     const textarea = e.target.parentElement.children[0];
     const postText = textarea.value;
-    const actualDate = new Date().getTime();
 
-    const actualUser = { ...userProfile };
-    const id = actualUser.posts.length;
-    actualUser.posts.push({ actualDate, postText, id });
+    if (postText) {
+      const actualDate = new Date().getTime();
 
-    updateUserLocalFirebase({ ...actualUser });
-    setUserProfile({ ...actualUser });
+      const actualUser = { ...userProfile };
+      const id = actualUser.posts.length;
+      actualUser.posts.push({ actualDate, postText, id });
 
-    e.target.parentElement.children[0].value = "";
+      updateUserLocalFirebase({ ...actualUser });
+      setUserProfile({ ...actualUser });
+
+      e.target.parentElement.children[0].value = "";
+    }
   };
 
   const activeSession = localStorage.getItem("user");
