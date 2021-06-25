@@ -35,7 +35,7 @@ const Profile = (props) => {
       city: elements[1].value,
       address: elements[2].value,
       phone: elements[3].value,
-      dateOfBirth: elements[4].value,
+      birthday: elements[4].value,
     };
 
     const oldState = { ...userProfile };
